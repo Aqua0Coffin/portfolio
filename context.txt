@@ -24,10 +24,10 @@ The brand identity for "Zephyrus" should be:
 *   **Methodology:** React Bits is a collection of open-source, customizable components. The approach will be to select desired components and integrate their source code directly into the project, rather than installing a package dependency.
 
 ## Current Phase:
-Development - Structure Complete
+Development - Hero Section Background Implemented
 
 ### Core Sections:
-*   Hero Section ✓
+*   Hero Section ✓ (Dynamic background implemented)
 *   About Us / The Team Section ✓
 *   Projects Section ✓
 *   Contact Form ✓
@@ -73,6 +73,11 @@ This file is intended to serve as a shared context for multiple AI models involv
 
 ---
 
+## AI Usage Log:
+*   **Gemini (Current Session):** Usage limit reached. Successfully iterated on and implemented the "Energetic & Fiery" background effect for the Hero section, including animated CSS gradients and interactive mouse-following hotspot.
+
+---
+
 ## Status:
 Project structure complete. Dev server running at http://localhost:5173/
 
@@ -110,7 +115,6 @@ zephyrus-site/
 ---
 
 ## Next Steps:
-1. Integrate Interactive Particle Field from React Bits into Hero section
 2. Add actual team member data to About section
 3. Add real project data to Projects section
 4. Connect Contact form to backend (Supabase/Formspree)
