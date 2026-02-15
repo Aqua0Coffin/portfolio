@@ -1,36 +1,34 @@
-import { useCallback } from "react";
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
-import { particlesConfig } from "./particles-config";
+import React from "react";
+import Dither from "../ui/Dither";
 
 /**
  * Hero Section
- * Features: Interactive particle field background, bold typography, CTA buttons
+ * Features: Dither animated background, bold typography, CTA buttons
  * Mobile-first design with responsive scaling
  */
 const Hero = () => {
-  const particlesInit = useCallback(async (engine) => {
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's a bundle giving access to all features
-    // you can load everything in a single file from the config
-    await loadSlim(engine);
-  }, []);
-
   return (
     <section
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center px-4 py-16 md:px-8 lg:px-16 overflow-hidden"
     >
-      {/* Background - Interactive Particle Field */}
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        options={particlesConfig}
-        className="absolute inset-0 z-0"
-      />
+      {/* Background - Dither Effect */}
+      <div className="absolute inset-0 z-0">
+        <Dither
+          waveColor={[1, 1, 1]}
+          disableAnimation={false}
+          enableMouseInteraction={true}
+          mouseRadius={0.3}
+          colorNum={4}
+          waveAmplitude={0.3}
+          waveFrequency={3}
+          waveSpeed={0.05}
+        />
+      </div>
+
 
       {/* Content */}
-      <div className="text-center max-w-4xl mx-auto z-10">
+      <div className="text-center max-w-4xl mx-auto z-10 relative">
         {/* Team Name */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 bg-gradient-to-r from-white via-purple-200 to-indigo-400 bg-clip-text text-transparent">
           Zephyrus
