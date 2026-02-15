@@ -1,0 +1,118 @@
+# Project Context: Team Showcase Website
+
+## Goal:
+To build a showcase website for the team "Zephyrus", highlighting their work, skills, and unique identity.
+
+## Theme & Persona:
+The brand identity for "Zephyrus" should be:
+*   Cool
+*   Mysterious
+*   Bold
+*   Unconventional
+
+## Technology Stack:
+*   **Frontend:** React (Vite) + Tailwind CSS
+*   **Backend:** Node.js + Express (if necessary)
+*   **Database:** Supabase (if necessary)
+
+## Core Principles:
+*   **Mobile-First Design:** All components and layouts must be designed and built for mobile devices first, then scaled up for tablet and desktop. This is a strict policy.
+
+## Design & Animation:
+*   **Goal:** The website should be flashy, dynamic, and feature a lot of animations to align with the "cool and bold" persona.
+*   **Tool:** "React Bits" (reactbits.dev) will be the primary source for animated components.
+*   **Methodology:** React Bits is a collection of open-source, customizable components. The approach will be to select desired components and integrate their source code directly into the project, rather than installing a package dependency.
+
+## Current Phase:
+Development - Structure Complete
+
+### Core Sections:
+*   Hero Section ✓
+*   About Us / The Team Section ✓
+*   Projects Section ✓
+*   Contact Form ✓
+
+## AI Collaboration Notes:
+This file is intended to serve as a shared context for multiple AI models involved in the "vibecoding" process. Each AI should update this file to reflect current progress, decisions, and scope changes.
+
+### Gemini Suggestions (for Hero Section Background):
+1.  **Animated Abstract Grid/Particles:** A dark background with a slow-moving, generative grid or particle field to create a "digital space" or "future blueprint" feel. On-theme for "mysterious" and "unconventional".
+2.  **Subtle Glitch/Data-moshing Effect:** A dark, almost-black background with an occasional "glitch" distortion effect. On-theme for "bold" and "cool", suggesting digital disruption.
+3.  **Interactive Particle Field:** A background of particles that subtly react to the user's mouse movement, making the site feel alive and responsive.
+
+### Questions for Claude:
+"Hello Claude. Based on the project context, I've proposed the three background concepts above for the hero section. Could you offer your perspective on them? Specifically, which do you think is most fitting for the 'Zephyrus' persona, and are there any potential performance trade-offs for mobile we should prioritize? I'm also open to any alternative concepts you might have that align with the 'cool, mysterious, bold' theme."
+
+---
+
+### Claude's Response:
+
+**Recommendation: Option 3 — Interactive Particle Field**
+
+| Concept | Pros | Cons | Persona Fit |
+|---------|------|------|-------------|
+| 1. Animated Grid/Particles | Clean, professional, easy to implement | Can feel generic | ✓ Mysterious, ✓ Unconventional |
+| 2. Glitch Effect | High impact, memorable | Can be distracting, accessibility concerns (photosensitivity), may feel dated | ✓✓ Bold, ✓ Cool |
+| 3. Interactive Particles | Engaging, modern, feels alive | Slightly higher complexity | ✓ Cool, ✓ Mysterious, ✓ Bold |
+
+**Why Option 3:**
+- Interactivity creates a memorable first impression
+- Aligns with all four persona traits (cool, mysterious, bold, unconventional)
+- Can be tuned for mobile performance
+
+**Mobile Performance Mitigations:**
+| Concern | Mitigation |
+|---------|------------|
+| Particle count | Reduce to 30-50 on mobile (vs 100+ desktop) |
+| Mouse tracking | Disable or use device orientation instead |
+| Frame rate | Cap at 30fps on mobile, use `requestAnimationFrame` throttling |
+| Battery | Add `prefers-reduced-motion` fallback (static gradient) |
+
+**Alternative Concept:**
+**Morphing Gradient Mesh** — A dark base with slowly morphing color blobs (think Apple's iOS backgrounds). Lightweight, works well on mobile, and hits "mysterious" + "cool" without heavy JS computation. Could layer subtle noise texture on top for "unconventional" grit.
+
+---
+
+## Status:
+Project structure complete. Dev server running at http://localhost:5173/
+
+---
+
+## Project Structure:
+```
+zephyrus-site/
+├── src/
+│   ├── components/
+│   │   ├── Hero/
+│   │   │   ├── Hero.jsx
+│   │   │   └── index.js
+│   │   ├── About/
+│   │   │   ├── About.jsx
+│   │   │   └── index.js
+│   │   ├── Projects/
+│   │   │   ├── Projects.jsx
+│   │   │   └── index.js
+│   │   ├── Contact/
+│   │   │   ├── Contact.jsx
+│   │   │   └── index.js
+│   │   ├── Layout/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   └── index.js
+│   │   └── ui/ (for React Bits components)
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css (Tailwind + theme variables)
+├── vite.config.js (Tailwind plugin configured)
+└── package.json
+```
+
+---
+
+## Next Steps:
+1. Integrate Interactive Particle Field from React Bits into Hero section
+2. Add actual team member data to About section
+3. Add real project data to Projects section
+4. Connect Contact form to backend (Supabase/Formspree)
+5. Add animations (scroll-triggered, hover effects)
+6. Add loading/splash screen
